@@ -4,7 +4,7 @@
  */
 
 const server = require('./lib/server');
-const worker = require('./lib/worker');
+const workers = require('./lib/workers');
 
 // Declare the app
 
@@ -14,7 +14,7 @@ app.init = function(){
     // Start the server
     server.init();
     // Start the worker
-    worker.init();
+    workers.init();
 };
 
 // Execute
