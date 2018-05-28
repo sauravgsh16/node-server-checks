@@ -89,7 +89,7 @@ body,p,h1,h2,h3,h4,h5,h6,div,span,header,footer,img,a,a:hover,a:active,a:visited
 }
 
 /* Index */
-body.index h1{
+h1{
   text-align: center;
   font-size: 20px;
   text-transform: uppercase;
@@ -97,7 +97,7 @@ body.index h1{
   padding: 0 0 5px 0;
 }
 
-body.index h2{
+h2{
   text-align: center;
   font-size: 13px;
   text-transform: uppercase;
@@ -119,11 +119,11 @@ body.index .blurb{
   font-size: 14px;
 }
 
-body.index .ctaWrapper{
+.ctaWrapper{
   text-align: center;
 }
 
-body.index .cta{
+.cta,a.cta:hover,a.cta:active,a.cta:visited,button.cta:hover,button.cta:active,button.cta:visited{
   background-color: #1a1a1a;
   color: #fff;
   border-radius: 10px;
@@ -133,14 +133,15 @@ body.index .cta{
   display: inline-block;
   padding: 15px;
   width: 150px;
+  cursor: pointer;
 }
 
-body.index .cta.blue{
-  background-color: #214478;
+.cta.blue{
+  background-color: #214478 !important;
 }
 
-body.index .cta.green{
-  background-color: #217844;
+.cta.green{
+  background-color: #217844 !important;
 }
 
 
