@@ -142,3 +142,41 @@ body.index .cta.blue{
 body.index .cta.green{
   background-color: #217844;
 }
+
+
+/* Form Styling for Account Creation page and others */
+.formWrapper{
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 15px;
+  }
+  
+  .formError{
+    display: none;
+    background-color: #c83737;
+    font-style: italic;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 0 15px 0;
+    text-align: center;
+    border-color: #d87070;
+    border-width: 2px;
+    border-style: solid;
+  }
+  
+  input {
+    border-width: 1px;
+    border-radius: 2px;
+    padding: 7px 1%;
+    width: 100%;
+  }
+  
+  .inputWrapper{
+    padding: 0 0 20px 0;
+  }
+  
+  .inputLabel{
+    padding: 0 0 5px 0;
+    color: #808080;
+  }
