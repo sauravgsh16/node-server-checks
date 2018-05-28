@@ -9,10 +9,11 @@ app.config = {
     'sessionToken': false
 }
 
-// AJAX Client
-app.client = {};
+// AJAX Client (for RESTful API)
+app.client = {}
 
-app.client.request = function(headers, path , method, queryStringObject, payload, callback){
+// Interface for making API calls
+app.client.request = function(headers,path,method,queryStringObject,payload,callback){
 
     // Set defaults
     headers = typeof(headers) == 'object' && headers !== null ? headers : {};
@@ -20,7 +21,7 @@ app.client.request = function(headers, path , method, queryStringObject, payload
     method = typeof(method) == 'string' && ['GET', 'POST', 'PUT', 'DELETE'].indexOf(method.toUpperCase()) > -1 ? method.toUpperCase() : 'GET';
     queryStringObject = typeof(queryStringObject) == 'object' &&  queryStringObject !== null ? queryStringObject : {};
     payload = typeof(payload) == 'object' && payload !== null ? payload : {};
-    callback = typeof(callabck) == 'function' ? callback : false;
+    callback = typeof(callback) == 'function' ? callback : false;
 
     // For each quesry string parameter sent, add it to the path variable
     var requestUrl = path+'?';
@@ -39,7 +40,7 @@ app.client.request = function(headers, path , method, queryStringObject, payload
     // Form the http request as a JSON type
     var xhr = new XMLHttpRequest();
     xhr.open(method, requestUrl, true); // 3rd param 'true' for async call
-    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("Content-type", "application/json");
 
     // For each header send add it to the request
     for(headerKey in headers){
@@ -54,7 +55,7 @@ app.client.request = function(headers, path , method, queryStringObject, payload
     }
 
     xhr.onreadystatechange = function(){
-        if(xhr.readyState = XMLHttpRequest.DONE){
+        if(xhr.readyState == XMLHttpRequest.DONE){
             var statusCode = xhr.status;
             var responseReturned = xhr.responseText;
 
