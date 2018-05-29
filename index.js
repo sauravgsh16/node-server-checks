@@ -21,4 +21,4 @@ app.init = function(){
 app.init();
 
 // Export the app
-module.exports = app
+module.exports = app;
